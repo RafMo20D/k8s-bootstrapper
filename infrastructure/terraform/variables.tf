@@ -1,52 +1,14 @@
-# ===================== DO CONFIG VARS =======================
-variable "do_token" {
-  description = "Personal Access Token to access the DigtialOcean API)"
-}
-
-# ===================== DOKS CONFIG VARS =======================
-
-variable "doks_cluster_name_prefix" {
+variable "cluster_name" {
   type        = string
-  default     = "k8s-bootstrapper"
-  description = "DOKS cluster name prefix value (a random suffix is appended automatically)"
+  description = "Name of the aKS cluster"
+  default     = "gitops"
 }
 
-variable "doks_k8s_version" {
+variable "cluster_version" {
   type        = string
-  default     = "1.25"
-  description = "DOKS Kubernetes version"
+  description = " aks cluster version"
+  default     = "1.26.6"
 }
-
-variable "doks_cluster_region" {
-  type        = string
-  default     = "ams3"
-  description = "DOKS region name"
-}
-
-variable "doks_default_node_pool" {
-  type = map(any)
-  default = {
-    name       = "bootstrapper-default"
-    node_count = 2
-    size       = "s-2vcpu-4gb"
-  }
-  description = "DOKS cluster default node pool configuration"
-}
-
-variable "doks_additional_node_pools" {
-  type        = map(any)
-  default     = {}
-  description = "DOKS cluster extra node pool configuration"
-}
-
-# ===================== DOKS CONFIG VARS =======================
-variable "container_registry" {
-  type    = string
-  default = "bootstrapper-cr"
-}
-
-# ===================== ARGOCD HELM CONFIG VARS =======================
-
 variable "enable_argocd_helm_release" {
   type        = bool
   default     = true

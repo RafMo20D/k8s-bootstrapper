@@ -8,7 +8,7 @@
 <img src="./docs/assets/pionative.png" alt="k8s-prod" width=800>
 </p>
 
-With [many cloud-native solutions](https://landscape.cncf.io/) popping up daily, it can be pretty daunting for engineers and organizations to choose the "right" tools to build their tech. It becomes all the more challenging to integrate them to get to **day-2 operations ready** in Kubernetes.
+With [many cloud-native solutions](https://landscape.cncf.io/) popping up daily, it can be pretty daunting for engineers and organizations to choose the "right" tools to build their tech. Integrating them to get to **day-2 operations ready** in Kubernetes becomes all the more challenging.
 
 ## Kubernetes Bootstrapper
 
@@ -76,7 +76,13 @@ terraform destroy --var-file=bootstrapper.tfvars --auto-approve
 
 ----
 
-##  Media/Demos
+## Demos
+
+*k8s-bootstrapper* in action
+
+- [DOKS Application Log Monitoring and Retention using Grafana Loki and DigitalOcean Spaces](https://github.com/hivenetes/k8s-bootstrapper/tree/loki-spaces-demo/demo/loki-spaces)
+
+##  Media
 
 - [YouTube: Project Overview](https://www.youtube.com/watch?v=p_4Qj3z6EDQ)
 - [Blog: Build your K8s framework](https://thecloudodyssey.com/build-your-own-kubernetes-framework)
